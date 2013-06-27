@@ -1,3 +1,15 @@
 <form action='/team' method="POST">
+  Team Name:  <input type="text" name="team[name]"></br>
+  Team Motto: <input type="text" name="team[motto]"></br></br>
+  <% i = 1 %>
+  <% 5.times do %>
+  Hero <%= "#{i}" %>
+  </br></br>
+  Name:      <input type="text" name="team[heroes][][name]"></br>
+  Power:     <input type="text" name="team[heroes][][power]"></br>
+  Biography: <input type="text" name="team[heroes][][bio]"></br></br>
+  <% i+=1 %>
+  <% end %>
 
+  <input type="submit">
 </form>
